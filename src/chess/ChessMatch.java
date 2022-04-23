@@ -3,11 +3,12 @@ package chess;
 import boardgame.Board;
 import boardgame.Position;
 import chess.pieces.King;
+import exceptions.BoardException;
 
 public class ChessMatch {
     private Board board;
 
-    public ChessMatch() {
+    public ChessMatch() throws BoardException{
         board = new Board(8,8);
         initialSetup();
     }
@@ -23,6 +24,6 @@ public class ChessMatch {
     }
 
     public void initialSetup(){
-        board.placePiece(new King(board, Color.WHITE), new Position(0,4));
+        board.placePiece(new King(board, Color.WHITE), new Position(10,4));
     }
 }
